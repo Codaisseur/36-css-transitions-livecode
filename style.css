@@ -1,0 +1,52 @@
+.menu {
+  display: flex;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.menu li {
+  list-style: none;
+  margin-right: 2rem;
+  animation: bounceIn 1s ease;
+}
+
+.menu li a {
+  display: block;
+  position: relative;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #aaa;
+  transition: background 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.menu li a:hover {
+  color: black;
+}
+
+.menu .underline-effect {
+  display: block;
+  height: 4px;
+  background: black;
+  width: 0%;
+
+  transition: width 0.5s ease;
+}
+
+.menu a:hover .underline-effect {
+  width: 100%;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translate(-1rem, -5rem);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(-1rem, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
